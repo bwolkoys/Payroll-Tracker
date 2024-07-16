@@ -21,3 +21,6 @@ AS A payroll manager...
 ## Screenshots 
 
 ## Resources
+
+- Used this to understand push and use it: https://www.geeksforgeeks.org/stack-push-method-in-java/ 
+- Used this to help me write the addEventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp 
