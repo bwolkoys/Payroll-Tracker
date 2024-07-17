@@ -9,10 +9,8 @@ function addEmployees() {
     console.log(`First name:`, firstName);
   let lastName = prompt(`Enter employee's last name:`);
     console.log(`Last name:`, lastName);
-  let salary = prompt(`Enter employee's salary`);
-    console.log(`Salary:`, salary);
-
-
+  let salaryInput = prompt(`Enter employee's salary`);
+  let salary = parseInt(salaryInput) || 0;
 
   employees.push({firstName, lastName, salary});
 
@@ -20,7 +18,7 @@ function addEmployees() {
     if (continueAddingEmployees) {
       addEmployees();
     } else {
-      displayEmployees();
+      employees.sort((a, b) => a.lastName.localeCompare(b.lastName));
       }
     }
 
@@ -30,20 +28,14 @@ const collectEmployees = function() {}
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
     let totalSalary = 0;
-    // going to calculate total salary
-    employeesArray.forEach(employees => {
-      totalSalary + employees.salary; 
-    });
-    // going to calculate average salary and then display it
-    const averageSalary = totalSalary / employeesArray.length;
-    console.log(`The average employee salary between ${employeesArray.length} employee is $${averageSalary.toFixed(2)}`);
-  }
+    };
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  const randomIndex = Math.floor(Math.random()* employeesArray.length);
-  const RandomEmployee = employeesArray[randomIndex];
-  console.log(`The random employee picked is ${RandomEmployee.firstName} ${RandomEmployee.lastName}`);
+  const totalEmployees = employees.length;
+  const randomIndex = Math.floor(Math.random()* totalEmployees);
+  const getRandomEmployee = employees[randomIndex];
+  console.log(`The random employee picked is ${getRandomEmployee.firstName} ${getRandomEmployee.lastName}`);
 
 }
 //Getting data to be displayed on the page by last name
