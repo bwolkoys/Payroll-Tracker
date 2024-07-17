@@ -6,8 +6,13 @@ let employees = [];
 
 function addEmployees() {
   let firstName = prompt(`Enter employee's first name:`);
+    console.log(`First name:`, firstName);
   let lastName = prompt(`Enter employee's last name:`);
+    console.log(`Last name:`, lastName);
   let salary = prompt(`Enter employee's salary`);
+    console.log(`Salary:`, salary);
+
+
 
   employees.push({firstName, lastName, salary});
 
@@ -40,14 +45,13 @@ const getRandomEmployee = function(employeesArray) {
   const RandomEmployee = employeesArray[randomIndex];
   console.log(`The random employee picked is ${RandomEmployee.firstName} ${RandomEmployee.lastName}`);
 
+}
+//Getting data to be displayed on the page by last name
+  let totalSalary = employees.reduce((acc, emp) => acc + emp.salary, 0);
+  let averageSalary = totalSalary / employees.length;
   console.log("Employee data:", employees);
   console.log("Total salary:", totalSalary);
   console.log("Average salary", averageSalary);
-}
-//Getting data to be displayed on the page by last name
-  employees.sort((a, b) => a.lastName.toLocaleString(b.lastName));
-  let employeeTable = document.getElementById("employeeTable");
-
 /*
   ====================
   STARTER CODE

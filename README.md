@@ -20,6 +20,9 @@ AS A payroll manager...
 
 ## Screenshots 
 
+<img width="790" alt="Screenshot 2024-07-17 at 11 34 51 AM" src="https://github.com/user-attachments/assets/703e8f3b-a29a-4009-bc51-326fd95aa835">
+- For lines 50 and 51, I used Xpert learning to give me the top two lines of code in java. 
+
 ## Resources
 
 - Used this to understand push and use it: https://www.geeksforgeeks.org/stack-push-method-in-java/ 
