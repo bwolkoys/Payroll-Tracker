@@ -26,5 +26,6 @@ AS A payroll manager...
 
 - Used this to understand push and use it: https://www.geeksforgeeks.org/stack-push-method-in-java/ 
 - Used this to help me write the addEventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp 
+- help with the if else statement : https://www.w3schools.com/js/js_if_else.asp 
 
 

@@ -16,7 +16,6 @@ if (!continueAddingEmployees) {
 });
 
 
-
 // Collect employee data
 const collectEmployees = function() {}
 
@@ -33,20 +32,6 @@ const getRandomEmployee = function(employeesArray) {
   console.log(`The random employee picked is ${getRandomEmployee.firstName} ${getRandomEmployee.lastName}`);
 
 }
-//Getting data to be displayed on the page by last name
-const employeeTable = document.getElementById('employee-table');
-employees.forEach(employee => { 
-  const row = document.createElement('tableRow');
- 
-  const firstNameCell = document.createElement ('th');
-  firstNameCell.textContent = employee.firstName;
-
-  const lastNameCell = document.createElement ('th');
-  lastNameCell.textContent = employee.lastName;
-
-  const salaryCell = document.createElement ('th');
-  salaryCell.textContent = employee.salary;
-});
 
 /*
   ====================
