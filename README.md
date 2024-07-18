@@ -18,13 +18,9 @@ AS A payroll manager...
 - WHEN I choose to cancel
 - THEN my employee data is displayed on the page sorted alphabetically by last name, and the console shows computed and aggregated data
 
-## Screenshots 
-
-
-
 ## Resources
 
-- Used this to understand push and use it: https://www.geeksforgeeks.org/stack-push-method-in-java/ 
+- Used this to understand push and use it: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push  
 - Used this to help me write the addEventListener: https://www.w3schools.com/js/js_htmldom_eventlistener.asp 
 - help with the if else statement : https://www.w3schools.com/js/js_if_else.asp 
 

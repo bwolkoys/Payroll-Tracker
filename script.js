@@ -1,14 +1,16 @@
-// Get a reference to the #add-employees-btn element
-const employees = [];
 
-const addEmployeesBtn = document.getElementById('#add-employees-btn');addEventListener("click", function() {
+const employees = [];
+// Get a reference to the #add-employees-btn element
+const addEmployeesBtn = document.getElementById('#add-employees-btn');
+//added event listener so the prompts below open up one at a time once I click "add employees button"
+addEventListener("click", function() {
   const firstName = window.prompt(`Enter employee's first name:`);
   const lastName = window.prompt(`Enter employee's last name:`);
   const salary = window.prompt(`Enter employee's salary`);
-
+//added this to have the variable employees, an array of the first name, last name, and salary and then did the .push so the information is added at the end.
 const employee = {firstName, lastName, salary};
-employees.push(employee);
-
+const displayEmployees = employees.push(employee);
+//this is if one wants to continue adding employees after adding 1
 const continueAddingEmployees = window.confirm (`Would you like to add another employee?`);
 if (!continueAddingEmployees) {
   console.log(employees);
