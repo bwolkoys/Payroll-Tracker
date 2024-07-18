@@ -1,26 +1,21 @@
 // Get a reference to the #add-employees-btn element
-const addEmployeesBtn = document.querySelector('#add-employees-btn');
-addEmployeesBtn.addEventListener("click", addEmployees);
+const employees = [];
 
-let employees = [];
+const addEmployeesBtn = document.getElementById('#add-employees-btn');addEventListener("click", function() {
+  const firstName = window.prompt(`Enter employee's first name:`);
+  const lastName = window.prompt(`Enter employee's last name:`);
+  const salary = window.prompt(`Enter employee's salary`);
 
-function addEmployees() {
-  let firstName = prompt(`Enter employee's first name:`);
-    console.log(`First name:`, firstName);
-  let lastName = prompt(`Enter employee's last name:`);
-    console.log(`Last name:`, lastName);
-  let salaryInput = prompt(`Enter employee's salary`);
-  let salary = parseInt(salaryInput) || 0;
+const employee = {firstName, lastName, salary};
+employees.push(employee);
 
-  employees.push({firstName, lastName, salary});
+const continueAddingEmployees = window.confirm (`Would you like to add another employee?`);
+if (!continueAddingEmployees) {
+  console.log(employees);
+}
+});
 
-  let continueAddingEmployees = confirm("Click ok to add another employee");
-    if (continueAddingEmployees) {
-      addEmployees();
-    } else {
-      employees.sort((a, b) => a.lastName.localeCompare(b.lastName));
-      }
-    }
+
 
 // Collect employee data
 const collectEmployees = function() {}
@@ -39,11 +34,20 @@ const getRandomEmployee = function(employeesArray) {
 
 }
 //Getting data to be displayed on the page by last name
-  let totalSalary = employees.reduce((acc, emp) => acc + emp.salary, 0);
-  let averageSalary = totalSalary / employees.length;
-  console.log("Employee data:", employees);
-  console.log("Total salary:", totalSalary);
-  console.log("Average salary", averageSalary);
+const employeeTable = document.getElementById('employee-table');
+employees.forEach(employee => { 
+  const row = document.createElement('tableRow');
+ 
+  const firstNameCell = document.createElement ('th');
+  firstNameCell.textContent = employee.firstName;
+
+  const lastNameCell = document.createElement ('th');
+  lastNameCell.textContent = employee.lastName;
+
+  const salaryCell = document.createElement ('th');
+  salaryCell.textContent = employee.salary;
+});
+
 /*
   ====================
   STARTER CODE
@@ -109,3 +113,9 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
+
+
+
+
+
+
